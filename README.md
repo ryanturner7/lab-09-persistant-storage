@@ -28,8 +28,6 @@
   * create a constructor to module your resouce and put it in your model directory
   * create a storage module that will persist you data to the file system
 
-* refactor the **storage** module to have file system persistence
-
 ## Bonus
 * **2pts** - have the **storage** module check for the type sub-directory, and create it if it does not exist
 
