@@ -15,11 +15,12 @@
 
 # Directions
 * make these directories to organize your code
- * lib
- * test
- * model
- * route
- * data // to hold your JSON files
+  * lib
+  * test
+  * model
+  * route
+  * data // to hold your JSON files
+
 
 * refactory your previous lab to 
   * pull your routes into a seporate module
