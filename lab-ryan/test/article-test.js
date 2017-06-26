@@ -78,6 +78,7 @@ describe('testing article routes', function() {
           done();
         });
     });
+
     it('should respond with a 400 status', (done) => {
       superagent.put(`localhost:3000/api/articles`)
         .send({})
@@ -87,6 +88,7 @@ describe('testing article routes', function() {
         });
     });
   });
+  
   describe('testing DELETE /api/articles', () => {
     it('should delete article', (done) => {
       superagent.delete(`localhost:3000/api/articles?id=${tempArticle.id}`)

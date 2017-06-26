@@ -39,6 +39,7 @@ router.put('/api/articles', (req, res) => {
  .then(article => res.sendJSON(202, article))
  .catch(err => res.sendStatus(404));
 });
+
 router.delete('/api/articles', (req, res) => {
   if(!req.url.query.id)
     return res.sendStatus(400);

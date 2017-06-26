@@ -15,6 +15,7 @@ router.post('/api/articles', (req, res) => {
     res.end();
     return;
   }
+
   let newArticle = new Article (req.body.title, req.body.author);
   newArticle.id = uuid.v1();
   storage[newArticle.id] = newArticle;
@@ -26,6 +27,7 @@ router.post('/api/articles', (req, res) => {
   res.end();
   return;
 });
+
 router.get('/api/articles', (req, res) => {
   if(!req.url.query.id){
     res.writeHead(400);
@@ -65,6 +67,7 @@ router.put('/api/articles', (req, res) => {
   res.end();
   return;
 });
+
 router.delete('/api/article', (req, res) => {
   if(!storage[req.url.query.id]){
     res.writeHead(404);
