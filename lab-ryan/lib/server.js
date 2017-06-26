@@ -1,7 +1,7 @@
 'use strict';
 
 const http = require('http');
-const router = require('./router.js');
+const router = require('../route/article-router.js');
 const uuid = require('uuid');
 const storage = require('../models/storage.js');
 const Article = require('../models/article.js');

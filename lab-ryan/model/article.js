@@ -21,7 +21,7 @@ class Article {
 Article.findById = (id) => {
   return storage.fetchItem(id)
   .then(data => {
-    return new Article(data.content, id);
+    return new Article(data.title, data.author, id);
   });
 };
 
