@@ -24,7 +24,7 @@ describe('testing article routes', function() {
         }))
         .end((err, res) => {
           if (err) return done(err);
-          expect(res.status).toEqual(201);
+          expect(res.status).toEqual(200);
           expect(res.body.id).toExist();
           expect(res.body.title).toEqual('The art of coding');
           expect(res.body.author).toEqual('Ryan Turner');

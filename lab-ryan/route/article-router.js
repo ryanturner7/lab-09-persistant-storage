@@ -14,6 +14,7 @@ router.post('/api/articles', (req, res) => {
 })
 .catch(err => {res.sendStatus(500);
 });
+
 router.get('/api/articles', (req,res) => {
   if(!req.url.query.id)
     return res.sendStatus(400);
@@ -46,6 +47,6 @@ router.delete('/api/articles', (req, res) => {
    .then(article => {
      return article.delete();
    })
-   .then(article => res.sendJSON(200, article))
+   .then(article => res.sendJSON(204, article))
    .catch(err => res.sendStatus(404));
 });

@@ -13,9 +13,7 @@ storage.setItem = (data) => {
   // TODO:  now that it has an id save it to ../data/${id} as json
   return fs.writeJson(`${__dirname}/../data/${data.id}`, data)
   .then(() => data);
-  .then(() => console.log(cache));
   };
-};
 
 storage.fetchItem = (id) => {
   console.log('cache', cache);
@@ -47,3 +45,4 @@ storage.deleteItem = (id) => {
     return Promise.resolve();
   }
   return Promise.reject(new Error('not found'));
+});
